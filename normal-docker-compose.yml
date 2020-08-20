@@ -1,0 +1,10 @@
+version: "3"
+services:
+    flaskapp:
+        build: .
+        ports: 
+           - 5000:5000
+        image: flaskimage:1
+        
+     redis:
+        image: "redis:alpine"

@@ -1,0 +1,16 @@
+version: "3"
+services:
+    app-flask:
+         build: 
+           context: .
+           dockerfile: Dockerfile
+           args:
+             - PYTHON_VERSION=3.4-alpine
+         image: app-flask
+         ports: 
+             - 5000:5000
+    redis-db:
+          image: redis:alpine
+             
+             
+         
